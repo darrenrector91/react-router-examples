@@ -8,7 +8,7 @@ import Contact from "./Contact";
 import "./index.css";
 const routing = (
   <Router>
-    <div>
+    <div className="menuWrapper">
       <ul className="menu">
         <li>
           <Link className="links" to="/">
@@ -26,9 +26,11 @@ const routing = (
           </Link>
         </li>
       </ul>
-      <Route exact path="/" component={App} />
-      <Route path="/users" component={Users} />
-      <Route path="/contact" component={Contact} />
+      <div className="routeName">
+        <Route exact path="/" component={App} />
+        <Route path="/users" component={Users} />
+        <Route path="/contact" component={Contact} />
+      </div>
     </div>
   </Router>
 );
